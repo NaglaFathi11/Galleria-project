@@ -41,7 +41,7 @@ export default function GalleryDetails() {
     if (isSlideshowActive) {
       const interval = setInterval(() => {
         NextBTN();
-      }, 2000);
+      }, 3000);
       return () => clearInterval(interval);
     }
   }, [slider, isSlideshowActive]);
