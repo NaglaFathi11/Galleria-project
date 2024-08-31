@@ -342,7 +342,7 @@ function App() {
     },
   ]);
 
-  // SliderShow state
+  // SliderShow
   const [isSlideshowActive, setIsSlideshowActive] = useState(false);
 
   function UpdateIsSlideshowActive(state) {
@@ -356,7 +356,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="maingallery" element={<MainGallery />} />
+            <Route index element={<MainGallery />} />
             <Route path="maingallery/:id" element={<GalleryDetails />} />
           </Route>
         </Routes>
