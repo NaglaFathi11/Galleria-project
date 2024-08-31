@@ -8,9 +8,9 @@ export default function Header() {
 
   return (
     <div id="header-wrapper">
-      <Link to={"/maingallery"}>
-        <img src="/assets/shared/logo.svg" alt="" />
-      </Link>
+      {/* <Link to={"/maingallery"}> */}
+      <img src="/assets/shared/logo.svg" alt="" />
+      {/* </Link> */}
       <button
         onClick={() =>
           passedValue.UpdateIsSlideshowActive(!passedValue.isSlideshowActive)
