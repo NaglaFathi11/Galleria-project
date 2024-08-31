@@ -1,0 +1,58 @@
+#container {
+    background-color: hsla(0, 0%, 0%, 0.753);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-image {
+    position: relative;
+}
+
+#container img {
+    width: 450px;
+}
+
+#container button {
+    position: absolute;
+    top: -29px;
+    right: 0px;
+    background-color: transparent;
+    font-family: 'libre baskerville';
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0px;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Mediam Screens */
+@media (min-width: 500px) and (max-width: 1115px) {
+
+    /* #container button {
+        top: 0;
+        left: 16px;
+        bottom: initial;
+    } */
+    #container img {
+        max-width: 574px;
+    }
+}
+
+/* Small screen */
+@media (max-width: 499px) {
+    #container img {
+        max-width: 324px;
+    }
+}

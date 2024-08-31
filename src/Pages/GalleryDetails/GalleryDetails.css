@@ -172,6 +172,33 @@ footer {
     cursor: url('/assets/left-click.png'), pointer;
 }
 
+
+.image-content button {
+    position: absolute;
+    /* z-index: var(--even-closer); */
+    left: 16px;
+    bottom: 16px;
+    width: 152px;
+    height: 40px;
+    /* padding: 0px; */
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7546);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    color: #FFF;
+    /* text-align: right; */
+    /* font-family: var(--font); */
+    font-size: 0.625rem;
+    /* font-style: normal; */
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.143px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 /* Small screen */
 @media (max-width: 499px) {
     #details-wrapper {
@@ -185,6 +212,12 @@ footer {
 
     .image-content {
         width: 302px;
+    }
+
+    .image-content button {
+        top: 16px;
+        left: 16px;
+        bottom: initial;
     }
 
     img.small-img,
@@ -256,6 +289,12 @@ footer {
     .image-content {
 
         width: 100%;
+    }
+
+    .image-content button {
+        top: 16px;
+        left: 16px;
+        bottom: initial;
     }
 
     img.small-img,

@@ -3,6 +3,7 @@ import { useContext, useState, useEffect } from "react";
 import { GalleryData } from "../../App";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "./GalleryDetails.css";
+import ViewImage from "../../Components/ViewImage/ViewImage";
 
 export default function GalleryDetails() {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ export default function GalleryDetails() {
   const [slider, setSlider] = useState(
     imagesData.findIndex((image) => image.id === parseInt(id))
   );
+  // console.log(slider);
 
   useEffect(() => {
     if (isSlideshowActive) {
@@ -48,12 +50,33 @@ export default function GalleryDetails() {
 
   const image = imagesData[slider];
 
+  // console.log(image);
+
+  // View Image lightbox
+  const [imagesIsVisible, setImageIsVisible] = useState(false);
+  function UpdateImageIsVisible(value) {
+    setImageIsVisible(value);
+  }
+  function handleViewImage() {
+    setImageIsVisible(true);
+  }
+
   return (
     <>
       {image ? (
         <>
           <div key={image.id} id="details-wrapper" className={image.className}>
+            <ViewImage
+              handleImages={handleImages}
+              image={image}
+              imagesIsVisible={imagesIsVisible}
+              UpdateImageIsVisible={UpdateImageIsVisible}
+            />
             <div className="image-content">
+              <button onClick={handleViewImage}>
+                <img src="/assets/shared/icon-view-image.svg" alt="" />
+                View image
+              </button>
               <img
                 src={handleImages(image)}
                 alt={image.name}
