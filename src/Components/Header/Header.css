@@ -1,0 +1,34 @@
+#header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 54px;
+}
+
+#header-wrapper::before {
+    position: absolute;
+    top: 70px;
+    content: "";
+    width: 100%;
+    height: .125rem;
+    background-color: #e6e6e6;
+}
+
+
+#header-wrapper button {
+    text-transform: uppercase;
+    letter-spacing: 2.57px;
+    color: #7D7D7D;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    #header-wrapper img {
+        width: 122px;
+    }
+}

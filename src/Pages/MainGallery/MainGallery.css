@@ -1,0 +1,287 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(21, 50px);
+    gap: 23px;
+}
+
+#gallery-item {
+    /* width: 100%; */
+    background-color: #fff;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* margin-bottom: 8px; */
+
+}
+
+.titles-wrapper {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 100%);
+    width: 100%;
+    /* height: auto; */
+    padding-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 7px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    pointer-events: none;
+    z-index: 3;
+
+}
+
+.gallery-title {
+    width: 81%;
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    text-wrap: pretty;
+    z-index: 5;
+}
+
+.galley-artist-name {
+    width: 81%;
+    color: rgba(255, 255, 255, 0.7528);
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 5;
+}
+
+.cover {
+    position: absolute;
+    opacity: 0.5;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cover:hover {
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+
+.firstImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+}
+
+.secondImage {
+    grid-column: 2/3;
+    grid-row: 1 /8;
+}
+
+.thirdImage {
+    grid-column: 3/4;
+    grid-row: 1 / 6;
+}
+
+.fourthImage {
+    grid-column: 4/5;
+    grid-row: 1 / 5;
+}
+
+.fifthImage {
+    grid-column: 1 / 2;
+    grid-row: 5 / 10;
+}
+
+.sixthImage {
+    grid-column: 2/3;
+    grid-row: 8 / 12;
+}
+
+.seventhImage {
+    grid-column: 3/4;
+    grid-row: 6 / 14;
+}
+
+.eighthImage {
+    grid-column: 4/5;
+    grid-row: 5/ 9;
+}
+
+.ninthImage {
+    grid-column: 1/2;
+    grid-row: 10 / 17;
+}
+
+.tenthImage {
+    grid-column: 2 / 3;
+    grid-row: 12 / 16;
+}
+
+.eleventhImage {
+    grid-column: 4 / 5;
+    grid-row: 9 / 16;
+}
+
+.twelfthImage {
+    grid-column: 1 / 2;
+    grid-row: 17 / 22;
+}
+
+.thirteenthImage {
+    grid-column: 2 / 3;
+    grid-row: 16 / 22;
+}
+
+.fourteenthImage {
+    grid-column: 3 / 4;
+    grid-row: 14 / 22;
+}
+
+.fifteenthImage {
+    grid-column: 4 / 5;
+    grid-row: 16 / 22;
+}
+
+
+/* Small Screens */
+@media (max-width: 640px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+/* Mediam Screen */
+@media (min-width: 641px) and (max-width: 870px) {
+    .gallery {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(25, 100px);
+        gap: 15px;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    /* 
+    .firstImage,
+    .secondImage,
+    .thirdImage,
+    .fourthImage,
+    .fifthImage,
+    .sixthImage,
+    .seventhImage,
+    .eighthImage,
+    .ninthImage,
+    .tenthImage,
+    .eleventhImage,
+    .twelfthImage,
+    .thirteenthImage,
+    .fourteenthImage,
+    .fifteenthImage {
+        grid-column: auto;
+        grid-row: auto;
+    } */
+    /* #gallery-item {
+        width: 100%;
+        height: auto;
+    } */
+
+    .firstImage {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+    }
+
+    .secondImage {
+        grid-column: 2 / 5;
+        grid-row: 1 / 6;
+    }
+
+    .thirdImage {
+        grid-column: 1 / 2;
+        grid-row: 4 / 7;
+    }
+
+    .fourthImage {
+        grid-column: 2 / 5;
+        grid-row: 6 / 8;
+    }
+
+    .fifthImage {
+        grid-column: 1 / 2;
+        grid-row: 7 / 10;
+    }
+
+    .sixthImage {
+        grid-column: 2 / 5;
+        grid-row: 8 / 11;
+    }
+
+    .seventhImage {
+        grid-column: 1 / 2;
+        grid-row: 10 / 14;
+    }
+
+    .eighthImage {
+        grid-column: 2/ 5;
+        grid-row: 11 / 13;
+    }
+
+    .ninthImage {
+        grid-column: 1 / 2;
+        grid-row: 14 / 17;
+
+    }
+
+    .tenthImage {
+        grid-column: 2 / 5;
+        grid-row: 13 / 16;
+    }
+
+    .eleventhImage {
+        grid-column: 1 / 2;
+        grid-row: 17 / 19;
+
+    }
+
+    .twelfthImage {
+        grid-column: 2 / 5;
+        grid-row: 16 / 19;
+
+    }
+
+    .thirteenthImage {
+        grid-column: 1 / 2;
+        grid-row: 19 / 23;
+
+    }
+
+    .fourteenthImage {
+        grid-column: 2 / 5;
+        grid-row: 19 / 23;
+
+    }
+
+    .fifteenthImage {
+        grid-column: 1/ 5;
+        grid-row: 23 / 26;
+        overflow: hidden;
+    }
+}
